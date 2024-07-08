@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SagatFarm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6603f56269e8e9d4705a415f14efe237e6a325af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3dbfe3e2abb4454ae5a5eef9332a54c11e8160f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("SagatFarm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SagatFarm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

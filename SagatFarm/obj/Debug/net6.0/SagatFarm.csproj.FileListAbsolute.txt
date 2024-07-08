@@ -37,3 +37,11 @@ D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.Ext
 D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 D:\Repositories Visual Studio\SagatFarm\SagatFarm\obj\Debug\net6.0\SagatFarm.sourcelink.json
+D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Repositories Visual Studio\SagatFarm\SagatFarm\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

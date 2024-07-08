@@ -15,6 +15,7 @@ namespace SagatFarm.Controllers
         {
             _contextApi = contextApi;
         }
+
         // Crear task
         [HttpPost]
         public JsonResult CrearTarea(ToDo todo)
@@ -45,7 +46,7 @@ namespace SagatFarm.Controllers
             if (result != null)
                 return new JsonResult(Ok(result));
             else
-                return new JsonResult(Ok("Task no encontrada"));
+                return new JsonResult(BadRequest("Task no encontrada"));
 
         }
 
@@ -65,16 +66,16 @@ namespace SagatFarm.Controllers
 
         // Task completada
         [HttpPut]
-        public JsonResult MarcarTareaCompletada(int id)
+        public IActionResult MarcarTareaCompletada(int id)
         {
             var result = _contextApi.ToDos.Find(id);
             if (result == null)
-                return new JsonResult("Task no encontrada");
+                return BadRequest("Task no encontrada");
 
             result.MarcarTareaCompletada();
             _contextApi.ToDos.Update(result);
             _contextApi.SaveChanges();
-            return new JsonResult(Ok("Tarea completada!"));
+            return Ok("Tarea completada!");
         }
 
         // Actualizar task
@@ -83,7 +84,7 @@ namespace SagatFarm.Controllers
         {
             var ToDoInDB = _contextApi.ToDos.Find(id);
             if (ToDoInDB == null)
-                return new JsonResult("Task no encontrada");
+                return new JsonResult(BadRequest("Task no encontrada"));
 
             ToDoInDB.Nombre = todo.Nombre;
             ToDoInDB.Descripcion = todo.Descripcion;
@@ -100,7 +101,7 @@ namespace SagatFarm.Controllers
         {
             var todo = _contextApi.ToDos.Find(id);
             if (todo == null)
-                return new JsonResult("Task no encontrada");
+                return new JsonResult(BadRequest("Task no encontrada"));
 
             todo.Comentar(comentario);
             _contextApi.ToDos.Update(todo);
@@ -116,7 +117,7 @@ namespace SagatFarm.Controllers
         {
             var todo = _contextApi.ToDos.Find(id);
             if (todo == null)
-                return new JsonResult("Task no encontrada");
+                return new JsonResult(BadRequest("Task no encontrada"));
 
             todo.Responder(respuesta);
             _contextApi.ToDos.Update(todo);
@@ -131,7 +132,7 @@ namespace SagatFarm.Controllers
         {
             var todo = _contextApi.ToDos.Find(id);
             if (todo == null)
-                return new JsonResult("Task no encontrada");
+                return new JsonResult(BadRequest("Task no encontrada"));
 
             return new JsonResult(Ok(new { Comentario = todo.Comentario, Response = todo.Respuesta }));
         }
@@ -142,7 +143,7 @@ namespace SagatFarm.Controllers
         {
             var todo = _contextApi.ToDos.Find(id);
             if (todo == null)
-                return new JsonResult("Task no encontrada");
+                return new JsonResult(BadRequest("Task no encontrada"));
 
             todo.Comentar(comentario);
             _contextApi.ToDos.Update(todo);
@@ -157,7 +158,7 @@ namespace SagatFarm.Controllers
         {
             var todo = _contextApi.ToDos.Find(id);
             if (todo == null)
-                return new JsonResult("Task no encontrada");
+                return new JsonResult(BadRequest("Task no encontrada"));
 
             todo.Comentar(String.Empty);
             _contextApi.ToDos.Update(todo);
